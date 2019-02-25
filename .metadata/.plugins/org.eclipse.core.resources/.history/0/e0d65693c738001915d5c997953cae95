@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>마우스 이벤트객체의 프로퍼티</title>
+<script >
+div {
+	background:skyblue;
+	width:250px;
+}
+</script>
+</head>
+<body>
+<h3>마우스 이벤트객체의 프로퍼티</h3>
+<hr>
+이미지위에 마우스를 움직일대
+onmousemove 리스너가 실행되고,
+마우스의 위치를 보여줍니다<p>
+<img src="images"
+</body>
+</html>
