@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>프로토 타입으로 객채를 만들기</title>
+	<script>
+	  // 프로토 타입으로 만들기:생성자 함수
+	  function Account(owner,code, balance){
+		  //프러퍼티 만들기
+		  this.owner=owner;  //계좌 주인 프러퍼티 만들기
+		  this.code=code;  //계좌 코드 프러퍼티 만들기
+		  this.balance= balance;//잔액 프러퍼티 만들기
+		  
+		  // 메소드 만들기
+		  this.inquiry=function () { return this.balance;}
+		  this.deposit=function(money){ this.balance +=money;}
+		  this.withdrw=function(money){  //예금 인출 .money는 인출한 액수
+			  //money 가 balance 보다 작다고 가정
+			  this.balance-= money;
+		      return money;
+		                             }
+	  }
+	</script>
+</head>
+<body>
+	<script >
+		//new 연산자 이용하여 계좌 객체 생성
+		var account =new Account("홍길동", "111",35000);
+		
+			//객체 활용
+		document.write("account :");
+		document.write(account.owner+ "," );
+		document.write(account.code+ ", ");
+		document.write(account.blance+",<br>" );
+		
+		account.deposit(10000);// 10000저금
+		document.write("10000원 저금 후 잔액은" +account.inquiry()+"<br>" );
+		account.withdraw(5000);// 5000인출
+		document.write("5000 원 인출후 잔액은"+ account. inquiry()+"<br>");
+		
+	</script>
+</body>
+</html>

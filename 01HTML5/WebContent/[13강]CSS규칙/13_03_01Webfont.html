@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>google-웹폰트</title>
+<!-- 참고로 일반적으로 사용하는 navi 관련 class명!
+.gnb : Global Navigation Bar -> 로그인, 언어 등을 포함하는 최상단 메뉴
+.lnb : Local Navigation Bar -> 메인메뉴
+.snb : Side Navigation Bar -> 서브메뉴
+
+※ navi는 gnb, lnb, snb 통틀어서 얘기할 때 쓴다.
+-->
+	<style>
+	<link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Oswald|Playfair+Display|Roboto+Slab" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Oswald|Playfair+Display|Roboto+Slab" rel="stylesheet">
+	  header {
+            width:1000px; margin:0 auto;
+            border:1px solid #cccccc;
+        }
+
+        #gnb ul {
+            font-family:'Lobster';
+            padding:0;
+            overflow:hidden;
+        }
+
+        #gnb ul li {
+            list-style:none;
+            float:left;
+            border:1px dotted #cccccc;
+            margin:0;
+        }
+
+        #gnb ul li a {
+            display:block;
+            text-decoration:none;
+            padding:5px;
+        }
+
+        #lnb ul {
+             font-family:'Lobster';
+            padding:0;
+            overflow:hidden;
+        }
+
+        #lnb ul li {
+            list-style:none;
+            float:right;
+            border:1px dotted #cccccc;
+            margin:0;
+        }
+
+        #lnb ul li a {
+            display:block;
+            text-decoration:none;
+            padding:5px;
+        }
+
+        #content {
+            width:1000px; margin:0 auto;
+            border:1px solid #cccccc;
+            overflow:hidden;
+        }
+
+        #section {
+            font-family:'Poiret One';
+            font-weight:bold; font-size:1.2em;
+            width:800px; height:400px;
+            padding:10px;
+            float:left;
+            border:1px solid #cccccc;
+        }
+
+        #aside {
+            font-family:'Indie Flower';
+            font-weight:bold; font-size:1.2em;
+            width:150px; height:400px;
+            padding:10px;
+            float:right;
+            border:1px solid #cccccc;
+        }
+
+        footer {
+            font-family:'Lobster';
+            width:1000px; height:100px; line-height:100px; margin:0 auto;
+            border:1px solid #cccccc;
+            text-align:center;
+        }
+        </style>
+</head>
+<body>
+	<header>
+	<div id ="gnb">
+	  <ul>
+		   <li><a href="none"> gnb01</a></li>
+		   <li><a href="none"> gnb02</a></li>
+		   <li><a href="none"> gnb03</a></li>
+		   <li><a href="none"> gnb04</a></li>
+		   <li><a href="none"> gnb05</a></li>
+	 </ul>
+	</div>
+		<div id ="lnb">
+		<ul>
+		   <li><a href="none"> lnb01</a></li>
+		   <li><a href="none"> lnb02</a></li>
+		   <li><a href="none"> lnb03</a></li>
+		   <li><a href="none"> lnb04</a></li>
+		   <li><a href="none"> lnb05</a></li>
+	   </ul>
+	</div>
+	</header>
+       <div id="content">
+       	<div id="section"> It is professional display space is in which exhibitions under diverse subjects including the cultural contents are held.Such exhibitions include the ARTTOON ART,Exhibition for 100 Modern Cartoonists of Korea and SF ManiA Exhibition.
+       	<div id ="aside">It is equipped with a stop-motion animation experience space and experience display room in which it is possible to create an animation video clip of one's own by creating a character in clay and taking photos with a camera. 
+       	</div>
+       </div>
+	<footer> 
+		<div id="office">
+ 		 office information
+  		</div>
+  	</footer>
+		
+</body>
+</html>

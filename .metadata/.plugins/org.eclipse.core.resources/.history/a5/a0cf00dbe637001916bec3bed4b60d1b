@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Math 를 활용한 구구단 연습</title>
+<script >
+	function randomInt() { return Math.floor(Math.random()*9)+1;}
+   // 1~9 의 십진의 난수 리턴
+</script>
+</head>
+<body>
+	<h3> Math 를 활용한 구구단 연습</h3>
+	<hr>
+	<script >
+	//구구단 문제 생성
+	var ques=randomInt()+"*"+randomInt();
+	//사용자가 구구단 답 입력
+	var user =prompt(ques+" 값은 얼마 입니까?",0);
+	if(user ==null) {  // 취소 버튼 클릭
+		document.write("구구단 연습을 종료");
+	}
+		else{
+			var ans= eval(ques); //	구구단 정답 계산 / ans는 문자가 됨
+			document.write(typeof(ans)+"<br>")//정답과 사용자 입력 비교
+			document.write(typeof(user)+'<br>')
+			if(ans==user)// 정답과 사용자 입력 비교
+			document.write("정답!");
+			else
+			document.write("아니오");
+			document.write(ques+"="+ "<string>" +ans+ "</string>입니다<br>");
+	}
+	   var n1=ans/2;
+	   if(isNaN(n1))
+		   document.write("NaN(1)");
+	   
+	   var n=user/2;
+	   if(isNaN(n2))
+		   document.write("NaN(2)");
+	   
+	   
+	</script>
+</body>
+</html>

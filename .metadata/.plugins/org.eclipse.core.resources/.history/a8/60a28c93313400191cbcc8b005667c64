@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>css3 예제4-1 전체 선택자</title>
+	<style>
+	*{
+	 color:#fff800;
+	}
+	</style>
+	</head>
+<body>
+	<header>
+	<h1> 대박 주식회사</h1>
+	</header>
+	
+	<nav>
+		<ul>
+			<li>회사 소개</li>
+			<li>제품 소개</li>
+			<li>고객 센터</li>
+			<li>공지 시항</li>
+			</ul>
+		</nav>
+		<section>
+			<p>
+			우리회사는 50년 전통의 역사와 뛰어난 기술을 바탕으로 좋은 회사입니다.
+			</p>
+		</section>
+		
+		<footer>
+			<p>
+				서울시 논현동
+			</p>
+		</footer>
+</body>
+</html>

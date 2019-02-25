@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+ <p><img src=img/gooleloge.png" alt="구글 로고"></p>
+ <p><img src="http://img.naver.net/static/www/u/2013/0731/nmms_224940510.gif" alt="logo"></p>
+<p><a href="http://www.never.com" target="_blank">
+<img src="http://img.naver.net/static/www/u/2013/0731/nmms_224940510.gif" alt="logo"></a></p>
+<img src="http://img.naver.net/atatic/www/u/2013/0731/없는 그림.gif" alt="logo"></p>
+<img src="img/googlelogo.png"alt="구글 로고" width="300"></p>
+
+
+ </body>
+</html>

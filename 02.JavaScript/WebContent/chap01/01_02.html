@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>스크립트 안에 코드 작성</title>
+	<script >
+		function over(obj) {
+			obj.src="media/banana.png";
+		}
+		function out(obj) {
+			obj.sr="media/apple.png";
+		}
+	</script>
+</head>
+<body>
+	<h3>마우스를 올려보세요</h3>
+	<img src=" media/apple.png" alt="이미지"
+				 onmouseover ="over(this)"
+	              onmouseout ="out(this)">
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<div>
+<h1>MY HOMEPAGE</h1>
+<hr/>
+<div>
+</div>
+<ul>
+
+<li>HTML5</li>
+<li>CSS3</li>
+<li>JAVASCRIPT</li>
+<li>JQUERY</li>
+</ul>
+
+</div>
+<div>
+<h1>Waht is HTML5?</h1>
+<P>html is gooooooooooooooooood</P>
+<hr/>
+</div>
+<div>
+<p> GiKimi 주식회사 서울시 논현동</p>
+</div>
+
+</body>
+</html>

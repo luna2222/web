@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>.Dialog 상자 종합</title>
+</head>
+<body>
+	<h3> 자바스크립트로 사용자 입력 및 대화</h3>
+	<hr>
+	<div id="result"></div>
+	<script >
+	
+	var result=docment.getElementById("result");
+	function promptEX() {
+		var ret=prompt("이름을 입력하세요","홍길동");
+		if (ret==null){
+			//취소버튼이나 다이얼로그를 닫은 경우
+		
+		result.innerHTML="취소나 그냥 닫았군요"}
+		}else {
+			//ret 에는 사용자가 입력한 문자열
+			//아무 값도 입력하지않으면, ret=""
+			result.innerHRML=ret;
+		}
+	}
+	function confirmEX(){
+		var ret=confirm("전송할까요");
+		if(ret==ture){
+			//사용자가 "확인" 버튼을 누른 경우
+
+		result.innerHTML="확인을 눌렀군요";
+			}else
+				//취소 버튼이나 다이얼로그가 닫한경우
+				result.innerHRML="취소나 그냥 닫았군요";
+	   }
+	}
+	funtion alertEX(){
+		alert("클릭하였습니다.");
+	}
+	</script>
+	<button oneclick"promptEX()></button>
+</body>
+</html>

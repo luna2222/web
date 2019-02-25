@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8"
+name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>반응형 웹</title>
+	 <style >
+	    @media screen and (max-width967px){
+	    #wrap {background-color: #00ff00; color: #ffffff;}
+	    }
+	    @ @media screen and ( min-width:768px)and (max-width:959px){
+	      #wrap{ background-color: #0000ff,color:#ffffff;}
+	     }
+	      @media screen and (min-width:960px){
+	      @Wrap{ background-color: #00000ff; color: #ffffff;}
+	      }
+	      *{margin: 0; padding: 0;}
+	      li{ list-style: none;}
+	      
+	      #wrap{width:80%; margin: 0 auto;}
+	      #header{border: 1px solid #cccccc; height: 100px;}
+	      #header>h1{text-align: center;}
+	      
+	      #nav {border: 1px solid #cccccc; }
+	      #nav ul{ overflow: hidden;}
+	      #nav ul li {float: left;padding: 5px 30px; text-align: center;
+	      height: :60px; line-height: 60px; border: 1px solid #cccccc;}
+	      
+	      #content_wrap{border: 1px solid #cccccc;}
+	      #content_wrap #content{padding: 10px;}
+	      #content_wrap #content>h2{ border-bottom: 1px solid #cccccc; margin-bottom:1px ;}
+	      
+	      #footer{height: 100px; line-height: 100px;text-align: center;font-size: 1.5em;
+	      font-weight: bold; margin: 0 auto; border: 1px solid #cccccc;}
+	    </style>
+</head>
+<body>
+	<div id="wrap">
+	 	<div id="header">
+	 	<h1> HEADER</h1>
+	 	</div>
+	 	<<div id ="nav">
+	 		<ul>
+	 		 	<li>menu1</li>
+	 		 	<li>menu2</li>
+	 		 	<li>menu3</li>
+	 		 	<li>menu4</li>	 	
+	 		</ul>
+	 	</div>
+	 	<div id="content_wrap">
+	 		<div id="conternt">
+	 		<h2>애국가</h2>
+	 			<p>
+	 			</p>
+	 			<p>
+	 			</p>
+	 			<p>
+	 			</p>
+	 			<p>
+	 			</p>
+	 			<div id"=footer">
+	 			  대한민국
+	 			</div>
+	 		</div>
+	 	</div>
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>레이아웃 종합</title>
+<style>
+div {
+	border: 1px solid #cccccc;
+	padding: 5px;
+	margin: 5px;
+	text-align: center;
+}
+#con{
+	width: 800px;
+	margin: 0 auto;
+	overflow:hidden;
+}
+#header {
+	width: 780px; height:100px;
+	background-color: #ffffff;
+	border: 1px solid #808080;
+	text-align: center;
+	line-height: 100px;
+}
+#nav{
+	width: 780px; height:100px;
+	overflow: hidden;
+#nav ul li{
+	width: 140px; height:40px;
+	line-height: 40px;
+	text-align: center;
+	list-style: none;
+	float: left;
+	border: 1px solid #dddddd;
+	}
+	
+#wrap {
+	width: 800px;
+	height: 100px;
+	line-height: 100px;
+	float: center;
+	text-align: center;
+	font-size: 1.5em;
+	border-top: 1px solid #808080;
+	margin: 5px;
+	overflow: hidden;;
+	
+}
+
+#content {
+	width: 750px;
+	height: 500px;
+	border: 1px solid;
+	float: left;
+	margin: 5px;
+}
+
+#banner {
+	height: 500px;
+	border: 1px solid;
+	float: right;
+	margin: 5px;
+}
+
+#footer {
+	clear: both;
+	background-color: #ffffff;
+	border: 3px solid #808080;
+	text-align: center;
+}
+</style>
+</head>
+<body>
+	<div id="con">
+	<div id="header">
+		<h1>HRADER</h1>
+	</div>
+
+	<div id="nav">
+		<p>NAVIGATION</p>
+		<li>menu1</li>
+		<li>menu2</li>
+		<li>menu3</li>
+		<li>menu4</li>
+		<li>menu5</li>
+	</div>
+	</div>
+	<div id="wrap">
+		<div id="content">CONTENT</div>
+		<div id="side_banner">BANNER</div>
+
+
+		<div id="footer">
+			<h1>FOODTER</h1>
+		</div>
+</body>
+</html>

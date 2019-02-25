@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>태그를 이용해서 HTML문서를 제작</title>
+</head>
+<body>
+	<a href="http://www.google.com">Go google.com></a>
+	<!-- google.com으로 또다른 태그가 존재 -->
+	<div>
+		<p>	div태그 안에 p태그가 존재 </p>
+	</div>
+</body>
+</html>
