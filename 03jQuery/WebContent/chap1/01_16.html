@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>body태그 구성</title>
+<script src="http://code.jquery.com/jquery.js"></script>
+<script >
+	$(document).ready(function(){
+		$('tr:odd').css('background','#F9F9F9');
+		$('tr:even').css('background','#9F9F9F');
+		$('tr:first').css('background','#000000').css('color','#FFFFFF');
+	});
+</script>
+</head>
+<body>
+	<table>
+		<tr><th>이름 </th><th>혈액형 </th><th>지역 </th></tr>
+		<tr><th>강민수 </th><th>AB 형</th><th>서울 송파구 </th></tr>
+		<tr><th>구지연 </th><th>B 형</th><th>미국 캥리포니아 </th></tr>
+		<tr><th>김미화 </th><th>AB 형</th><th>미국 메사추세츠 </th></tr>
+		<tr><th>김선화 </th><th>O 형</th><th>서울 강서구 </th></tr>
+		<tr><th>남기주 </th><th>A 형</th><th>서울 노량진구 </th></tr>
+		<tr><th>윤하린 </th><th>B 형</th><th>서울 용산구 </th></tr>
+	</table>
+</body>
+</html>

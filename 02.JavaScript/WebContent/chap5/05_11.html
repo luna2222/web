@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>스크린 장치에 관한 정보</title>
+<script >
+function printScreen(){
+	var text= "availHeight:".fontcolor('blue') +screen.availHeight+"<br>";
+	var text += "availWidth:".fontcolor('blue') +screen.availWidth+"<br>";
+	var text += "colorDepth:".fontcolor('blue') +screen.colorDepth+"<br>";
+	var text += "pixeDepth:".fontcolor('blue') +screen.pixeDepth+"<br>";
+	var text += "height:".fontcolor('blue') +screen.heigth="<br>";
+	var text += "width:".fontcolor('blue') +screen.width+"<br>";
+	
+	document.getElementById("div").innerHTML=text;
+}
+</script>
+</head>
+<body onload="printScreen()">
+<h3>스크린 장치에 관한 정보 </h3>
+<hr>
+<div id="div"></div>
+</body>
+</html>

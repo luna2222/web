@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>5초 후 선택자 사용</title>
+<script src="http://code.jquery.com/jquery.js"></script>
+<script>
+	$(document).ready(function(){
+		//5초 후에 코드를 실행
+		setTimeout(function(){
+			//변수를 선언
+			var value =$('select> option:selected').val();
+			//출력
+			alert(value);
+		}, 5000);
+		});
+</script>
+</head>
+<body>
+	<select>
+		<option>Apple </option>
+		<option>Bag </option>
+		<option>Cat </option>
+		<option>Dog </option>
+		<option>Elephant </option>
+	</select>
+</body>
+</html>
