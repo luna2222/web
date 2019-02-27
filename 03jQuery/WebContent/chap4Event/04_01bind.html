@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>bind</title>
+<style>
+	.reverse{
+		background: Black;
+		color:White;
+	}
+</style>
+<script src="http://code.jquery.com/jquery.js"></script>
+<script >
+	$(document).ready(function(){
+		//이벤트를 연결
+	$('h1').bind('click',function(){ 
+		$(this).html(function (index,html){
+			return html + '+';
+		});
+	});		
+	//이벤트 연결
+	$('h1').bind({
+		mouseenter: function (){ $(this).addClass('reverse');},
+		mouseenter: function (){ $(this).removeClass('reverse');}
+	});
+  
+});	
+</script >
+</head>
+<body>
+<h1>Header</h1>
+<h1>Header</h1>
+<h1>Header</h1>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+<style>
+	.first{ color: Red;}
+	.second{ color:Pink;}
+	.third{ color: Orange;}
+</style>
+<script src="http://code.jquery.com/jquery.js"></script>
+
+<script >
+	$(document).ready(function(){
+		//변수 선언
+		var color=$('h1').css('color');	
+		//출력
+		alert(color);
+		});
+		
+</script>
+</head>
+<body>
+<h1 class="first">  Header1</h1>
+<h1 class="second">  Header2</h1>
+<h1 class="third">  Header3</h1>
+
+</body>
+</html>

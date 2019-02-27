@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>hover()과toggle</title>
+<style>
+	.reverse{
+		background: Black;
+		color:White;
+	}
+</style>
+<!-- 최신 버전에서는 안됨 -->
+<script src="http://code.jquery.com/jquery.js"></script>
+<script >	
+$(document).ready(function(){
+	
+	//이벤트 연결
+	$('h1').hover(function (){
+		 $(this).addClass('reverse');
+		 },function(){	 
+	    $(this).removeClass('reverse');
+	});
+	//이벤트 연결
+	$('h1').toggle(function (){
+		//문자열에 앞에 별을추가
+		$(this).html(function (index, html){
+			return '★'+ html;
+		});
+	},function(){
+		//문자열의 뒤에 별을 추가	
+		$(this).html(function (index, html){
+			return html +'★';
+		},function(){
+			//문자열의 별 재거
+		 $(this).html(function (index, html){
+		return html.substring(1, html.length-1);
+		 });
+	});
+});	
+</script>		
+
+</head>
+<body>
+<h1>Header0</h1>
+<h1>Header1</h1>
+<h1>Header2</h1>
+</body>
+</html>

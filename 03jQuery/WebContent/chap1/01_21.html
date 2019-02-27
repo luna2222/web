@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="http://code.jquery.com/jquery.js"></script>
+<script>
+    $(ducument).ready(function)(){
+    	$('h1').each(function (index,item){
+    		
+    	});
+    });
+</script>
+<style>
+	.high_light_0{ background:Yellow ;}
+	.high_light_1{ background:Orange ;}
+	.high_light_2{ background:Blue ;}
+	.high_light_3{ background:Green ;}
+	.high_light_4{ background:Red ;}
+
+</style>
+<script>
+    $(ducument).ready(function)(){
+    	$('h1').each(function (index,item){
+    		$('h1').addClass('high_light_'+index);
+    		return 'high_light_'+index;
+    	});
+    });
+</script>
+
+</head>
+<body>
+	<h1> item0</h1>
+	<h1> item1</h1>
+	<h1> item2</h1>
+	<h1> item3</h1>
+	<h1> item4</h1>
+		
+</body>
+</html>

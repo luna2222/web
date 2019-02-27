@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>stop</title>
+<style >
+	* {
+	margin: 5px; padding: 5px;
+	border: 3px solid black;}
+}
+</style>
+<script src="http://code.jquery.com/jquery.js"></script>
+<script >
+	$(document).ready(function(){
+		$('a').click(function (event){
+			$(this).css('backgroud-color','Blue');
+			event.stopPropagation();
+			event.preventDefault();
+		});
+		
+	});
+</script>		
+</head>
+<body>
+<h1>
+<a href ="http://google.com"> Google</a>
+</h1>
+</body>
+</html>

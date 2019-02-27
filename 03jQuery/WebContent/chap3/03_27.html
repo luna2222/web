@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+<script src="http://code.jquery.com/jquery.js"></script>
+
+<script >
+	$(document).ready(function(){
+	$('img').first().appendTo('body');
+		
+	});
+</script >
+<script >
+	$(document).ready(function(){
+		//image 크기를 조정
+	$('img').css('width',250);
+	//함수를 2초마다 실행
+	setInterval(function (){
+		//첫번째 이미지가 마지막으로 보내짐
+		$('img').first().appendTo('body');
+		},2000);
+	})
+</script>
+</head>
+<body>
+<img src="Chrysanthemum.jpg"/>
+<img src="Desert.jpg"/>
+<img src= "Hydrangeas.jpg"/>
+<img src="Jellyfish.jpg"/>
+<img src="Koala.jpg"/>
+</body>
+</html>

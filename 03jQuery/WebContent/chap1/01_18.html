@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>배열관리</title>
+<script src="http://code.jquery.com/jquery.js"></script>
+<script>
+	$(ducument).ready(function)(){
+		//변수를 선언
+		var array=[
+				{ name:'Google',link:'http://google.com'},
+				{ name:'Naver',link:'http://naver.com'},
+				{ name:'Daum',link:'http://duum.net'}
+				];
+		//$each()메소드를 사용
+		$.each(array,function(index,item) {
+			//변수를 선언
+			var output ='';
+			//문자열을 만듬
+			output += '<a href="'+item.link +'">';
+			output += '<h1>'+item.name +'</h1>';
+			output +='</a>';
+			//집어넣는다
+			document.body.innerHTML += output;
+		});
+	});
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>
