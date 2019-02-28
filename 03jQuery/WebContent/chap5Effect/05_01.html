@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="http://code.jquery.com/jquery.js"></script>
+<script>
+	$(document).ready(function(){
+		$('h1').click(function (){
+			$(this).next().toggle('slow',function (){
+			alert('EFFECT END...!');
+		});
+	});
+});
+</script>
+</head>
+<body>
+	<h1> OPEN & CLOSE</h1>
+	<div>
+	<h2>Lorem Ipsum  </h2>
+	<p> What is Lorem Ipsum?  </p>
+	</div>
+	<h1> OPEN & CLOSE</h1>
+	<div> 
+		<h2>Lorem Ipsum </h2>
+		<p>There is no one who loves pain itself,<br>
+		 who seeks after it and wants to have it, <br>
+		 simply because it is pain..  </p>
+	</div>
+</body>
+</html>

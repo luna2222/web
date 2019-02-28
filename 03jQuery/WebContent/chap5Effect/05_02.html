@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>hide</title>
+<script src="http://code.jquery.com/jquery-1.7.js"></script>
+<script>
+	$(document).ready(function(){
+		$('h1').click(function (){
+			$(this).next().hide('slow')
+		},function () {
+			$(this).next().show('slow');
+				
+	});
+});
+</script>
+</head>
+<body>
+	<h1> OPEN & CLOSE</h1>
+	<div>
+	<h1>Lorem Ipsum  </h1>
+	<p> What is Lorem Ipsum?  </p>
+	</div>
+	<h1> OPEN & CLOSE</h1>
+	<div> 
+		<h1>Lorem Ipsum </h1>
+		<p>There is no one who loves pain itself,<br>
+		 who seeks after it and wants to have it, <br>
+		 simply because it is pain..  </p>
+	</div>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="http://code.jquery.com/jquery.js"></script>
+<script>
+	$(document).ready(function(){
+			$('textarea').keyup(function (){
+				//남은 글자스 를 구함
+			var inputLength =$(this).val().length;
+				var remain=20- inputLength;
+				
+				//문서의 객체를 입력
+				$('h1').html(remain);
+			//문서의 색상을 변경
+				if(remain >0) {
+					$('h1').css('color','Black');					
+				}else{
+					$('h1').css('color','Red');
+				}
+			});
+	});
+</script>
+</head>
+<body>
+
+</body>
+</html>
