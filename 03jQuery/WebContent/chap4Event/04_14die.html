@@ -2,22 +2,28 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>live</title>
+<title>die</title>
 
 <script src="http://code.jquery.com/jquery-1.7.js"></script>
 <script >
 	$(document).ready(function(){
+		//이벤트 연결
 		$('h1').live('click',function(){
 			var length =$('h1').length;
 			var targetHTML =$(this).html();
-			$('#wrap').append('<h1>'+length+'-'+targetHTML+'<h1>');
+			$('#wrap').append('<h1>'+length+ '-' +targetHTML+'<h1>');
 		});
-	});
+		// 5초 이후에는 모든 이벤트 제거
+		setTimeout(function () {
+			$('h1').die();
+		},5000);
+		});
 </script >
 </head>
 <body>
 	<div id="wrap">
 		<h1> Header</h1>
 	 </div>
+
 </body>
 </html>

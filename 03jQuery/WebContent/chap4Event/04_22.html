@@ -2,15 +2,15 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>checkbox와 radio인 input 태그의 상태 변경하는 이벤트</title>
 <script src="http://code.jquery.com/jquery-1.7.js"></script>
 <script>
 	$(document).ready(function(){
 			$('#all_check').change(function () {
 				if(this.checked){
-					$('#check_item').chilren().attr('checked', true);
+					$('#check_item').children().attr('checked', true);
 				}else {
-					$('#check_item').chilren().attr('checkes',false);
+					$('#check_item').children().attr('checkes',false);
 					
 				}
 			});

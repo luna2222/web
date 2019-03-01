@@ -3,21 +3,20 @@
 <head>
 <meta charset="UTF-8">
 <title>bind</title>
-
+<!-- 현재 존재하는 문서 객체에만 이벤트를 연결-->
 <script src="http://code.jquery.com/jquery.js"></script>
 <script >
 	$(document).ready(function(){
-		$('h1).bind('click',function(){
+		$('h1').bind('click',function(){
 			var length = $('h1').length;
 			var targetHTML =$(this).html();
 			$('#wrap').append('<h1>'+length+'-'+targetHTML+'</h1>');
-		});
-		
-		});
+		});		
+	});
 </script >
 </head>
 <body>
->
+
 	<div id="wrap">
 		<h1> Header</h1>
 	 </div>

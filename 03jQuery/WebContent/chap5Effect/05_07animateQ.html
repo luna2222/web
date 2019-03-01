@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>큐Queue에 누적되어 실행</title>
+<style >
+div{ 
+		width: 50px; height: 50px;
+		background-color: Orange;
+		position:relative;
+	 }
+</style>	
+<script src="http://code.jquery.com/jquery.js"></script> 
+<script>
+	$(document).ready(function(){
+		$('div').click(function (){		
+			 $(this).animate
+				 left:'+=60'
+			 }, 2000).animate({
+				 width: '+=60'
+			 },2000).animate({ 
+                height:'+=60'
+			 }); 	
+			$(this).animate({
+				width: parseInt(width) +50,
+				height: parseInt(height) +50
+			}, 'show');
+		});
+
+</script>
+</head>
+<body>
+<div></div>
+<div></div>
+<div></div>
+</body>
+</html>

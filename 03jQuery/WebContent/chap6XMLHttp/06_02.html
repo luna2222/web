@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+    
+
+
+</head>
+<body>
+<script >
+
+ function createRequest(){
+	 var request;
+	 try{
+		 request =new XMLHttpRequest(); 
+	 }catch(exception){
+		 try{
+			 request =new ActiveXObject('Msxml2.XMLHTTP');  
+		 }catch(innerException){
+			 request =new ActiveXObject('Microsoft.XMLHTTP');  
+		 }
+	 }return request;
+ }
+    //XMLHttpRequest 객체 생성
+	var request = createRequest();
+	request.open('GET', '/data.html', false);
+	
+	//Aiax 수행
+	request.send();
+	//출력
+	document.body.innerHTML += request.responseText;
+	</script>
+</body>
+</html>

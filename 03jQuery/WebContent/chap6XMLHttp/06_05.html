@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<script>
+unction createRequest(){
+	 var request;
+	 try{
+		 request =new XMLHttpRequest(); 
+	 }catch(exception){
+		 try{
+			 request =new ActiveXObject('Msxml2.XMLHTTP');  
+		 }catch(innerException){
+			 request =new ActiveXObject('Microsoft.XMLHTTP');  
+		 }
+	 }return request;
+}
+ //XMLHttpRequest 객체 생성
+	var request = createRequest();
+ 	request.onreadystatechange =function (event){
+ 		alert(request.readyState);
+ 	};
+	request.open('GET', /'data.html', false);
+	request.send();
+	document.body.innerHTML += request.responseText;	
+</script>
+</body>
+</html>

@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>upper</title>
 <style >
 	*{margin: 0px; padding: 0px;}
 	div { margin:10px; padding: 10px;
@@ -13,7 +13,7 @@
 <script src="http://code.jquery.com/jquery.js"></script>
 <script>
 	$(document).ready(function(){
-			$(document).on('click','div',function(){
+			$('#upper_div').on('click','div',function(){
 				$(this).clone().appendTo('#upper_div');
 			    $(this).clone().appendTo('#lower_div');
 			});
@@ -25,9 +25,9 @@
 	<div>
 		<h1>($selector).on() </h1>
 		<p>What is Lorem Ipsum?</p>
-		</div>
-		<div id="lower_div">		
-		</div>
-</div>
+	</div>
+	<div id="lower_div">
+  </div>
+</div>	
 </body>
 </html>

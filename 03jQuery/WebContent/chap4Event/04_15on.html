@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>on</title>
+<style >
+	*{margin: 0px; padding: 0px;}
+	div { 
+	    margin:10px; padding: 10px;
+		border:3px solid black;
+		border-radius: 10px;
+	  }
+</style>
+<script src="http://code.jquery.com/jquery.js"></script>
+<script>
+	$(document).ready(function(){
+			$('div').on('click',function(){
+				$(this).clone().appendTo('body');
+			});
+	});
+</script>
+</head>
+<body>
+<div>
+<h1>$()selector.on() </h1>
+<p>What is Lorem Ipsum?</p>
+
+</div>
+</body>
+</html>

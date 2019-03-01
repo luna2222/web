@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>clearQueue</title>
+<style>
+div{ 
+		width: 100px; height: 100px;
+		background-color: Orange;
+		position:relative;
+	 }
+</style>
+<script src="http://code.jquery.com/jquery.js"></script>
+<script>
+	$(document).ready(function(){
+		//animate() 메서드를 사용
+		$('div').animate({  left:'+=60'}, 2000);
+		$('div').animate({  width:'+=60'}, 2000);
+		$('div').animate({  heigth:'+=60'}, 2000);
+		
+		//3초 후에 함수를 실행
+		setTimeout(function (){
+		// 애니메이션 큐 제거	
+		$('div').clearQueue();
+		//효과메서드
+		$('div').hide();
+		},3000);
+	});
+</script>
+</head>
+<body>
+<div></div>
+<div></div>
+<div></div>
+</body>
+</html>

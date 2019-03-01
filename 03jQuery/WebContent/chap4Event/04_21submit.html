@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>form</title>
 <script src="http://code.jquery.com/jquery.js"></script>
 <script>
 	$(document).ready(function(){
@@ -15,8 +15,7 @@
 				alert(name +':'+password);
 				//기본 이벤트 제거
 				event.preventDefult();
-			});
-			
+			});			
 	});
 </script>
 </head>
@@ -25,11 +24,12 @@
 		<table>
 			<tr>
 				<td> 이름:</td>
-				<td><input type="text" name="name" id="namr"/></td>
+				<td><input type="text" name="name" id="name"/></td>
 			</tr>
+			<tr>
 			<td> 비밀번호 :</td>
 			<td><input type="password" name="password"  id="password"/></td>
-			
+			</tr>
 		</table>
 		<input type="submit" value="제출"/>
  	</form>

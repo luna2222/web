@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<script>
+function createRequest(){
+	 var request;
+	 try{
+		 request =new XMLHttpRequest(); 
+	 }catch(exception){
+		 try{
+			 request =new ActiveXObject('Msxml2.XMLHTTP');  
+		 }catch(innerException){
+			 request =new ActiveXObject('Microsoft.XMLHTTP');  
+		 }
+	 }return request;
+}
+    //XMLHttpRequest 객체 생성
+	var request =new createRequest();
+	request.open('GET', '/data.html', false);
+	
+	//send() 메소드에 소비디는 시간측정
+	var prevDate= new Date();
+	request.send();
+	var nowDate =new Date();
+	//출력
+	alert(nowDate-prevDate);
+	
+	document.body.innerHTML += request.responseText;
+	
+</script>
+</body>
+</html>
