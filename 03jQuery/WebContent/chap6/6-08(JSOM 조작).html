@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<script>
+	
+		function createRequest() {
+			var request;
+			try {
+				request = new XMLHttpRequest();
+			} catch (innerException) {
+				try {
+					request = new ActiveXObject('Msxml2.XMLHTTP')
+				} catch (innerException) {
+					request = new ActiveXObject('Microsoft.XMLHTTP')
+				}
+			}
+			return request;
+		}
+	
+		var request = createRequest();
+		var json;
+		request.onreadystatechange = function (event) {
+			if (request.readyState == 4){
+				if (request.status == 200) {
+					json = eval('(' + request.responseText + ')');
+					console.log(json); //F12 누른 후 개발자 도구 console 창을 통해 확인 가능해짐
+					var output = '';
+					
+					for(var i =0 ; i<json.length; i++){
+						for(var key in json[i]){
+							output += '<h1>' + i + ':' + json[i][key] + '</h1>';
+						}
+					}
+					//출력 합니다.
+					//json 파일의 내용이 변경될 경우
+					//브라우져의 캐쉬 데이터 삭제가 되어야만 변경 가능
+					document.body.innerHTML += output;
+				};
+			};
+		};
+		request.open('GET', '/data.json', true);
+		request.send();
+	</script>
+</body>
+</html>

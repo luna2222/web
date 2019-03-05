@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>6-02</title>
+</head>
+<body>
+
+	<script>
+		//XMLHttpRequest 객체를 생성하는 함수
+		function createRequest() {
+			var request;
+			try {
+				request = new XMLHttpRequest();
+			} catch (innerException) {
+				try {
+					request = new ActiveXObject('Msxml2.XMLHTTP');
+				} catch (innerException) {
+					request = new ActiveXObject('Microsoft.XMLHTTP');
+				}
+			}
+			return request;
+		}
+		
+		//XMLHttpRequet 객체를 생성합니다.
+		var request = createRequest();
+		request.open('GET', '/data.html', false); // false 동기식, true 비동기식
+		// false 동기식 : 데이터를 서버에 보낸 후 서버로 부터 응답을 받아야만 동작을 한다.
+		// true 비동기식 : 데이터를 서버에 보낸 후 응답이 없어도 동작을 한다.
+		
+		// Ajax를 수행합니다.
+		request.send();
+		
+		//출력합니다.
+		document.body.innerHTML += request.responseText;
+	
+	</script>
+	
+
+</body>
+</html>

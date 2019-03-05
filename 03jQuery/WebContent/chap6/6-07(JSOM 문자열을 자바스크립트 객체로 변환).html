@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<script>
+	
+		function createRequest() {
+			var request;
+			try {
+				request = new XMLHttpRequest();
+			} catch (innerException) {
+				try {
+					request = new ActiveXObject('Msxml2.XMLHTTP');
+				} catch (innerException) {
+					request = new ActiveXObject('Microsoft.XMLHTTP');
+				}
+			}
+			return request;
+		}
+	
+		var request = createRequest();
+		request.onreadystatechange = function (event) {
+			if (request.readyState == 4){
+				if (request.status == 200) {
+					var json = eval('(' + request.responseText + ')');
+					console.log(json);
+				};
+			};
+		};
+		request.open('GET', '/data.json', true);
+		request.send();
+	</script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>6-01</title>
+</head>
+<body>
+	<script>
+	
+	function createRequest() {
+		var request;
+		try {
+			request = new XMLHttpRequest();
+		} catch (innerException) {
+			try {
+				request = new ActiveXObject('Msxml2.XMLHTTP');
+			} catch (innerException) {
+				request = new ActiveXObject('Microsoft.XMLHTTP');
+			}
+		}
+		return request;
+	}
+	
+		var request = createRequest();	
+		request.open('GET','/data.html', false);
+		
+		// send() 메서드에 소비되는 시간 측정
+		var prevDate = new Date();
+		request.send();
+		var nowDate = new Date();
+		
+		// 측정된 시간 출력
+		alert(nowDate - prevDate);
+		
+		//alert(request.responseText);
+		document.body.innerHTML += request.responseText;
+	</script>
+
+</body>
+</html>

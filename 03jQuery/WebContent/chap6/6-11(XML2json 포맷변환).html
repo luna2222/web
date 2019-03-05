@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="xml2json.js"></script>
+</head>
+<body>
+	<script>
+
+		function createRequest() {
+			var request;
+			try {
+				request = new XMLHttpRequest();
+			} catch (innerException) {
+				try {
+					request = new ActiveXObject('Msxml2.XMLHTTP')
+				} catch (innerException) {
+					request = new ActiveXObject('Microsoft.XMLHTTP')
+				}
+			}
+			return request;
+		}
+
+		var request = createRequest();
+		request.onreadystatechange = function (event) {
+			if (request.readyState == 4){
+				if (request.status == 200) {
+					//변수를 선언합니다.
+					var json = xml2json.parser(request.responseText);
+          			//console.log(json); // F12를 누른 후 개발자도구 콘솔에서 확인가능
+          			//console.log(json.root.datas.data[0]); // root.datas.data 하위의 배열의 0번 데이터
+
+          			//이용합니다.
+					for (var i=0; i< json.root.datas.data.length; i++){
+						document.body.innerHTML += '<h1>' + json.root.datas.data[i].name + '</h1>';
+						document.body.innerHTML += '<h2>' + json.root.datas.data[i].price + '</h2>';
+					}
+				}
+			};
+		};
+		request.open('GET', '/data.xml', true);
+		request.send();
+
+	</script>
+
+</body>
+</html>

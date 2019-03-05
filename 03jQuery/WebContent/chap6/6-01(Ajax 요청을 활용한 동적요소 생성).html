@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>6-01</title>
+</head>
+<body>
+	<script>
+		var request = new XMLHttpRequest();
+		request.open('GET','/data.html', false);
+		
+		request.send();
+		
+		//alert(request.responseText);
+		document.body.innerHTML += request.responseText;
+	</script>
+
+</body>
+</html>
