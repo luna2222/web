@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery Ajax Total</title>
+    <script src="http://code.jquery.com/jquery.js"></script>
+    <script>
+    function form_check() {
+    	// 기본 체크
+    	var vName = $('#name').val();
+
+    	//submit_ajax();
+    	//서브를 끄고 실행할때
+    	var xml_data = 
+    	"<?xml version=\"1.0\" encoding=\"UTF-8\"?> " +
+    	"<root> " +
+    	"  <datas> " +
+    	"    <data> " +
+    	"        <name>사과</name> " +
+    	"        <price>1,000</price> " +
+    	"	 </data> " +
+    	"    <data> " +
+    	"        <name>바나나</name> " +
+    	"        <price>1,200</price> " +
+    	"	</data> " +
+    	"  </datas> " +
+    	"</root>";
+    	//return_xml(xml_data);
+    	//return_ajax1();
+    	return_ajax2();
+    }
+    
+    function submit_ajax() {
+        $.ajax({
+            url: '/parameter1.jsp',
+            type: 'post',
+            dataType: 'text',
+            data: $('#my-form').serialize(),
+            error: function (xhr, status, error) {
+            	alert(error);
+            },
+            success: function (data) {
+            	return_xml(data);
+            }
+        });
+    }    
+    
+    function return_xml(data) {
+    	// xml read
+        $(data).find('data').each(function () {
+            // 변수 선언
+            var name = $(this).find('name').text();
+            var price = $(this).find('price').text();
+
+            // 출력
+            $('<h1></h1>').text(name + ':' + price).appendTo('body')
+        });
+    }
+
+    function return_ajax1() {
+    	// json read
+    	var json_data =
+        "{  \"version\":\"1.0\", \"name\":\"홍길동1\" } ";
+        var jsonObj = JSON.parse(json_data);
+
+        for(var objVarName in jsonObj) {
+    	    $('body').append('<h1>' + objVarName + ' : ' + jsonObj[objVarName] + '</h1>');
+        }
+    }
+
+    function return_ajax2(obj) {
+    	// json read
+    	var json_data =
+        "{\"data\":[ " +
+        "    {  " +
+        "        \"version\":\"1.0\", " +
+        "        \"name\":\"홍길동1\" " +
+        "    }, " +
+        "    {  " +
+        "        \"version\":\"1.1\", " +
+        "        \"name\":\"홍길동2\" " +
+        "    }  " +
+        "]}";
+        var jsonObj = JSON.parse(json_data);
+
+    	console.log(jsonObj);
+    	console.log(jsonObj.data);
+    	console.log(jsonObj.data[0]);
+
+        for(var i = 0; i < jsonObj.data.length; i++) {
+            for(var objVarName in jsonObj.data[i]) {
+    	        $('body').append('<h1>' + objVarName + ' : ' + jsonObj.data[i][objVarName] + '</h1>');
+            }
+            $('body').append('<hr>');
+        }
+        
+        $(jsonObj.data).each(function(index, value) {
+        	$('body').append('<h1>' + index + ' : ' + value.version + ":" + value.name + '</h1>');
+        });
+
+    }
+
+    $(document).ready(function () {
+
+    });
+    </script>
+</head>
+<body>
+    <form id="my-form">
+        <table>
+            <tr>
+                <td>Name</td>
+                <td><input id="name" name="name" type="text" /></td>
+            </tr>
+            <tr>
+                <td>Region</td>
+                <td><input id="region" name="region" type="text" /></td>
+            </tr>
+        </table>
+        <input type="button" value="Get Ajax String" onclick="form_check();" />
+    </form>
+
+</body>
+</html>
+

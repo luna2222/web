@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	$(document).ready(function() {
+		$('#my-form').submit(function(event) {
+			
+			// 기본 이벤트를 제거합니다.
+			event.preventDefault();
+		});
+	});
+	</script>	
+</head>
+<body>
+<form action="cal" method="get">
+첫번째수:<input type="text" name="num1" size="10"><br>
+두번째수:<input type="text"name="num2" size="10"><br>
+계산종류:<input type="radio"name=operator value="add" checked="checked">더하기
+<input type="radio"name=operator value="min">빼기
+<input type="radio"name=operator value="mul">곱하기
+<input type="radio"name=operator value="div">나누기<br><br>
+계산결과보기:<input type="submit" value="계산결과보기"><br>
+다시계산하기:<input type="reset" value="다시계산">
+</form>
+</body>
+</html>
