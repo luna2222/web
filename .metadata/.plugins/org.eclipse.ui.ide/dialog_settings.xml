@@ -107,6 +107,9 @@
 		<item value="false" key="WizardProjectsImportPage.STORE_COPY_PROJECT_ID"/>
 		<item value="false" key="WizardProjectsImportPage.STORE_ARCHIVE_SELECTED"/>
 		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="D:\lee sh\Web\Jsp25-4-Com-ajax"/>
+			<item value="D:\lee sh\Web\Ajax예제"/>
+			<item value="D:\lee sh\Web\JSP27-~1"/>
 			<item value="D:\lee sh\Web\Jsp22-DAO-Ajax"/>
 			<item value="D:\lee sh\Web\Jsp21_DAO-HW"/>
 			<item value="D:\lee sh\Web\Jsp20-1-DAO"/>

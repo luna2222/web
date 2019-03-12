@@ -43,7 +43,7 @@ while (resultSet.next())
 	phone = resultSet.getString("phone");
 	gender = resultSet.getString("gender");
 }
-	phone1=phone.substring(1,3);
+	phone1=phone.substring(0,3);
 	phone2=phone.substring(4,8);
 	phone3=phone.substring(9,13);
 	%>
