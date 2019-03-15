@@ -107,6 +107,7 @@
 		<item value="false" key="WizardProjectsImportPage.STORE_COPY_PROJECT_ID"/>
 		<item value="false" key="WizardProjectsImportPage.STORE_ARCHIVE_SELECTED"/>
 		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="D:\lee sh\Web\JSP27-BBS3"/>
 			<item value="D:\lee sh\Web\Jsp25-4-Com-ajax"/>
 			<item value="D:\lee sh\Web\Ajax예제"/>
 			<item value="D:\lee sh\Web\JSP27-~1"/>
