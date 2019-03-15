@@ -10,9 +10,11 @@
 <title>content</title>
 </head>
 <body>
-	 <div class="container-fluid">
+    <div class="row justify-content-md-center">
+	 <div class="container">
 	<table width="600" cellpadding="0" cellspacing="0" border="1">
-	
+	 
+    
 		<tr>
 			<td> 번호 </td>
 			<td>${content_view.bId}</td>
@@ -43,6 +45,7 @@
 			</td>
 		</tr>
 	</table>
+	</div>
 	</div>
 	<!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

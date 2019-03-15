@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>client</title>
 </head>
 <body>
 <%
@@ -18,7 +18,8 @@
 	session.setAttribute("uid",id);
 	} 
 %>
-	
+	<div class="container">
+	 <div class="form-group">
 	<div>
 		사용자 아이디 :<%=id%>
 	</div>
@@ -26,9 +27,12 @@
 		<input type="text" id="messageinput" />
 	</div>
 	<div>
-		<button type="button" onclick="openSocket();">Open</button>
-		<button type="button" onclick="send();">Send</button>
-		<button type="button" onclick="closeSocket();">Close</button>
+	  
+		<button type="button" class="btn btn-primary"value="Open" onclick="openSocket();">Open</button>
+		<button type="button" class="btn btn-primary"value="Send" onclick="send();">Send</button>
+		<button type="button" class="btn btn-primary"value="Close"onclick="closeSocket();">Close</button>
+	  </div>
+	</div>
 	</div>
 	<!-- sever responses get written here -->
 	<div id="messages"></div>
@@ -38,7 +42,7 @@
 		var messages=document.getElementById("messages");
 		
 		function openSocket(){
-		
+			// Ensures only one connection is open at a time
 		    if(webSocket !=undefined && webSocket.readyState !=WebSocket.CLOSED){
 			    writeResponse("WebSocket is already opened.");
 			    return;	
@@ -47,9 +51,13 @@
 		    //webSocket= new WebSocket("ws://localhost/   *PreojectName */echo");
 		    
 		webSocket =new WebSocket("ws://localhost:8081/WebSocketEx/websocketendpoint2");
-		
+		/**
+    	* Binds functions to the listeners for the websocket.        	
+    	*/
 		webSocket.onopen= function(event){
-			
+    		// For reasns I can't determine, onopen gets called twice
+    		// and the first time event.data is undefined.
+    		// Leave a comment if you know the answer.
 			if(event.data==undefined)
 				return;
 			writeResponse(event.data);
@@ -61,11 +69,14 @@
 				   writeResponse("Connection closed");
 				};
 			}
-				
+		 
+       	 		/**
+    			* Sends the value of the text input to the server        	
+    			*/
 				function send(){
 					var id = "<%= id %>";
 					var text =document.getElementById("messageinput").value;
-					webSocket.send(id+ "|" +text);
+					webSocket.send(id+ " | " +text);
 				}
 				function closeSocket(){
 					webSocket.close();

@@ -6,21 +6,24 @@
 <head>
 <meta charset="UTF-8">
  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
  <!-- Bootstrap CSS -->
  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-<title>Insert title here</title>
+<title>리스트</title>
 </head>
 <body>
 	
-	<table width="600" cellpadding="0" cellspacing="0" border="1">
-		<tr>
-			<td>번호</td>
-			<td>이름</td>
-			<td>제목</td>
-			<td>날짜</td>
-			<td>히트</td>
-		</tr>
+     <div class="container-fluid">
+	 <table width="600" cellpadding="0" cellspacing="0" border="1">
+	  	
+		  <tr>		
+			<td><h6>번호</h6></td>
+			 <td><h6>이름></h6></td>
+			<td><h6>제목</h6></td>
+			<td><h6>날짜</h6></td>
+			<td><h6>히트</h6></td>
+		      </tr>
+		     
+		</table>
 		<c:forEach items="${list}" var="dto">
 		<tr>
 			<td><a href="content_view.do?bId=${dto.bId}&kind=view">${dto.bId}</a></td>
@@ -91,6 +94,20 @@
 		</tr>
 		
 	</table>
+	</div>
+	</div>
+	
+	
+	<nav class="navbar navbar-light bg-light">
+	<div class="container-fluid">
+    <form class="form-inline">
+    <input class="form-control mr-sm-2" type="search" placeholder="검색" aria-label="Search">
+    <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">검색</button>
+   </form>
+   </div>
+   </nav>
+	
+	<div class="container-fluid">
 	
 	totalCount : ${page.totalCount}<br>
 	listCount : ${page.listCount}<br>
@@ -99,6 +116,7 @@
 	pageCount : ${page.pageCount}<br>
 	startPage : ${page.startPage}<br>
 	endPage : ${page.endPage}<br>
+	</div>
 <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

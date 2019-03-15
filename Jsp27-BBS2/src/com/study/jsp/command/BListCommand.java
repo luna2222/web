@@ -25,7 +25,7 @@ public class BListCommand  implements Bcommand {
 			 
 		 }
 		BDao dao = new BDao();
-		BPageInfo pinfo=dao.articlePage(nPage);
+		BPageInfo pinfo= dao.articlePage(nPage);
 		request.setAttribute("Page", pinfo);
 		
 		nPage=pinfo.getCurPage();
