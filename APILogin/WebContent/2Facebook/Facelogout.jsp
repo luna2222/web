@@ -17,7 +17,7 @@
     });
 
     FB.getLoginStatus(function(response) {
-    	console.log(response);
+    	console.log(respone);
       statusChangeCallback(response);
     });
   };

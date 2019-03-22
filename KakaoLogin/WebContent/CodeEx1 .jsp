@@ -15,7 +15,7 @@
     <a href="http://developers.kakao.com/logout">로그아웃</a>
     <script type='text/javascript'>
       //<![CDATA[
-        Kakao.init('JavaScript Key Your-ID');
+        Kakao.init('96cbddbae1f2af7aee66dcfc75b1cd0f');
         // 카카오 로그인 버튼을 생성합니다.
         Kakao.Auth.createLoginButton({
           container: '#kakao-login-btn',

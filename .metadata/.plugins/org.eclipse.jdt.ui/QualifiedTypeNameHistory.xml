@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="javax.servlet.ServletContextEvent"/>
-<fullyQualifiedTypeName name="javax.servlet.ServletContext"/>
-<fullyQualifiedTypeName name="javax.servlet.ServletRequestListener"/>
 <fullyQualifiedTypeName name="javax.servlet.ServletContextListener"/>
 <fullyQualifiedTypeName name="java.lang.Override"/>
 <fullyQualifiedTypeName name="javax.servlet.annotation.WebListener"/>
@@ -15,12 +12,10 @@
 <fullyQualifiedTypeName name="com.sun.xml.internal.bind.CycleRecoverable.Context"/>
 <fullyQualifiedTypeName name="org.apache.catalina.tribes.transport.DataSender"/>
 <fullyQualifiedTypeName name="javax.activation.DataSource"/>
-<fullyQualifiedTypeName name="com.study.jsp.MemberDAO"/>
 <fullyQualifiedTypeName name="com.study.jsp.MemberDao"/>
 <fullyQualifiedTypeName name="com.study.jsp.MemberDTO"/>
 <fullyQualifiedTypeName name="sun.security.jca.GetInstance.Instance"/>
 <fullyQualifiedTypeName name="javax.servlet.annotation.WebServlet"/>
-<fullyQualifiedTypeName name="javax.servlet.ServletException"/>
 <fullyQualifiedTypeName name="com.study.jsp.FrontCon"/>
 <fullyQualifiedTypeName name="com.sun.corba.se.spi.orbutil.fsm.Action"/>
 <fullyQualifiedTypeName name="java.lang.System"/>
@@ -41,23 +36,28 @@
 <fullyQualifiedTypeName name="java.sql.Timestamp"/>
 <fullyQualifiedTypeName name="javax.servlet.RequestDispatcher"/>
 <fullyQualifiedTypeName name="javax.servlet.http.HttpServlet"/>
-<fullyQualifiedTypeName name="javax.servlet.http.HttpServletRequest"/>
-<fullyQualifiedTypeName name="javax.servlet.http.HttpServletResponse"/>
 <fullyQualifiedTypeName name="com.study.jsp.dto.BDto"/>
 <fullyQualifiedTypeName name="com.study.jsp.dao.BDao"/>
 <fullyQualifiedTypeName name="com.study.jsp.command.BReplyViewCommnad"/>
 <fullyQualifiedTypeName name="sun.misc.Perf.GetPerfAction"/>
 <fullyQualifiedTypeName name="java.lang.Exception"/>
-<fullyQualifiedTypeName name="javax.servlet.http.HttpSession"/>
 <fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="com.study.jsp.command.BPageInfo"/>
 <fullyQualifiedTypeName name="javax.websocket.OnOpen"/>
 <fullyQualifiedTypeName name="org.apache.catalina.Session"/>
 <fullyQualifiedTypeName name="javax.websocket.RemoteEndpoint.Basic"/>
-<fullyQualifiedTypeName name="java.io.IOException"/>
 <fullyQualifiedTypeName name="javax.websocket.OnMessage"/>
 <fullyQualifiedTypeName name="javax.websocket.OnClose"/>
 <fullyQualifiedTypeName name="javax.websocket.OnError"/>
 <fullyQualifiedTypeName name="javax.websocket.server.ServerEndpoint"/>
 <fullyQualifiedTypeName name="javax.websocket.Session"/>
+<fullyQualifiedTypeName name="javax.servlet.http.HttpServletRequest"/>
+<fullyQualifiedTypeName name="javax.servlet.http.HttpServletResponse"/>
+<fullyQualifiedTypeName name="java.io.IOException"/>
+<fullyQualifiedTypeName name="javax.servlet.ServletException"/>
+<fullyQualifiedTypeName name="javax.servlet.http.HttpSession"/>
+<fullyQualifiedTypeName name="com.study.jsp.MemberDAO"/>
+<fullyQualifiedTypeName name="com.sun.corba.se.impl.activation.CommandHandler"/>
+<fullyQualifiedTypeName name="com.study.jsp.command.BReplyViewCommand"/>
+<fullyQualifiedTypeName name="sun.security.krb5.internal.LoginOptions"/>
 </qualifiedTypeNameHistroy>

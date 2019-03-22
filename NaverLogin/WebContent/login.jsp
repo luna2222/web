@@ -28,7 +28,7 @@
 					<li role="presentation"><a id="gnbLogin" href="#">Login</a></li>
 				</ul>
 			</nav>
-			<h3 class="text-muted">Login With NaverID Javascript SDK</h3>
+<!--			<h3 class="text-muted">Login With NaverID Javascript SDK</h3> -->
 		</div>
 
 			<div id="naverIdLogin">

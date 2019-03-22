@@ -28,6 +28,8 @@ public class BDao {
 	int listCount=10;//한페이지당 보여줄 게시물의 갯수
 	int pageCount=10;//하단에 보여줄 페이지 리스트 수
 	
+	
+	
 
 	public BDao() {
 		try {
@@ -84,7 +86,7 @@ public class BDao {
 			con = dataSource.getConnection();
 			
 			String query = " select * "+
-						"from("+
+						"  from("+
 						"  select rownum num, A.*"+
 						"  from("+
 						"  select *"+
@@ -349,7 +351,7 @@ public class BDao {
 		}
 	}
 
-	public  BPageInfo articlePage(int curPage, int startPage) {
+	public  BPageInfo articlePage(int curPage) {
 		
 		Connection con = null;
 		PreparedStatement pstmt = null;
@@ -392,7 +394,7 @@ public class BDao {
 	if(myCurPage<1)
 		myCurPage=1;
 	//시작페이지
-	int StartPage= ((myCurPage-1)/pageCount)*pageCount+1;
+	int startPage= ((myCurPage-1)/pageCount)*pageCount+1;
 	
 	//끝페이지
 	int endPage=startPage+pageCount-1;
@@ -412,6 +414,10 @@ public class BDao {
      
 		return pinfo;
 	}
+
+	
+
+	
 
      
 //	private Connection getConnection() {

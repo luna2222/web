@@ -1,4 +1,5 @@
 <%@page import="com.study.jsp.MemberDAO"%>
+
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <% request.setCharacterEncoding("UTF-8"); %>
@@ -9,7 +10,7 @@
 <%
 	String id = (String)session.getAttribute("id");
 	dto.setId(id);	
-	MemberDAO dao = MemberDAO.getInstance();
+	MemberDAO  dao = MemberDAO.getInstance();
 	int ri = dao.updateMember(dto);
 	String json_data = "";
 	if (ri == 1) { // 정보가 수정되었습니다.
