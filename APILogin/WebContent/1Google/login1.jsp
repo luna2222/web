@@ -5,7 +5,6 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <script src="http://code.jquery.com/jquery.js"></script>
-
 <script src="https://apis.google.com/js/platform.js" async defer></script>
 <meta name="google-signin-client_id" content="114278354697-r9lk9ii6vpcf7669a0emug5sqroqqk7u.apps.googleusercontent.com">
 <title>구글 로그인</title>

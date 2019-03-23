@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import com.struy.jsp.dto.MemberDTO;
+import com.strudy.jsp.dto.MemberDTO;
 import com.study.jsp.dao.MemberDAO;
 
 @WebServlet("/ModifyProcess")

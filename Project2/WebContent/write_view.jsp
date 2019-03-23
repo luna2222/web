@@ -12,10 +12,10 @@
 </head>
 <body>
 	
-	<table	width="600" cellpadding="0" cellspacing="0" border="1">
+	<table	width="600" cellpadding="5" cellspacing="5" border="5">
 		<form action="write.do" method="get">
 		<table class="table">
-        <thead class="thead-dark">
+        
         
            <tr>
 				<td> 게시판 구분 </td>

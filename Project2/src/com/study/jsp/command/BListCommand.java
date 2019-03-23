@@ -8,8 +8,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import com.struy.jsp.dto.BDto;
-import com.struy.jsp.dto.BpageInfo;
+import com.strudy.jsp.dto.BDto;
+import com.strudy.jsp.dto.BpageInfo;
 import com.study.jsp.dao.BDao;
 
 public class BListCommand implements Bcommand {

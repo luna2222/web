@@ -10,7 +10,7 @@
 <title>Insert title here</title>
 <script type="text/javascript" src="./naver-editor/js/service/HuskyEZCreator.js" charset="utf-8"></script>
 <script type="text/javascript">
-	function form_check() {
+	    function form_check() {
 		oEditors.getById["ir1"].exec("UPDATE_CONTENTS_FIELD", []);
 		document.modify_form.submit();
 	}

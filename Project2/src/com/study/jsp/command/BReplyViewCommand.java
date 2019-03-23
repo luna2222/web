@@ -6,8 +6,8 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.strudy.jsp.dto.BDto;
 import com.study.jsp.dao.BDao;
-import com.struy.jsp.dto.BDto;
 
 public class BReplyViewCommand implements Bcommand{
 

@@ -5,7 +5,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <% request.setCharacterEncoding("UTF-8"); %>
-<jsp:useBean id="dto" class="com.struy.jsp.dto.MemberDTO" />
+<jsp:useBean id="dto" class="com.strudy.jsp.dto.MemberDTO" />
 <jsp:setProperty property="*" name="dto"/>
 <%
 	dto.setrDate(new Timestamp(System.currentTimeMillis()));

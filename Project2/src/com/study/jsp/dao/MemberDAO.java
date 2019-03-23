@@ -8,7 +8,7 @@ import javax.naming.Context;
 import javax.naming.InitialContext;
 import javax.sql.DataSource;
 
-import com.struy.jsp.dto.MemberDTO;
+import com.strudy.jsp.dto.MemberDTO;
 
 public class MemberDAO {
 	
@@ -19,6 +19,7 @@ public class MemberDAO {
 	public static final int MEMBER_LOGIN_PW_NO_GOOD = 0;
 	public static final int MEMBER_LOGIN_SUCCESS = 1;
 	public static final int MEMBER_LOGIN_IS_NOT = -1;
+	public static final int MEMBER_DELETE_SUCCESS = 1;
 	
 	private static MemberDAO instance = new MemberDAO();
 	
@@ -195,6 +196,31 @@ public class MemberDAO {
 				e2.printStackTrace();
 			}
 		}		
+		return ri;
+	}
+public int deleteMember(String Id) {
+		
+		Connection con = null;
+		PreparedStatement pstmt = null;
+		String query = "delete from members where id=?";
+		int ri = 0;
+		
+		try {
+			con = getConnection();
+			pstmt = con.prepareStatement(query);
+			pstmt.setString(1,dto.getId());
+			pstmt.executeUpdate();
+			ri = MemberDAO.MEMBER_DELETE_SUCCESS;
+		}catch(Exception e) {
+			e.printStackTrace();
+		}finally {
+			try {
+				if(pstmt != null) pstmt.close();
+				if(con != null) con.close();
+			}catch(Exception e2) {
+				e2.printStackTrace();
+			}
+		}
 		return ri;
 	}
 	

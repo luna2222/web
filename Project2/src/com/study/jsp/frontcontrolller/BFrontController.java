@@ -77,7 +77,10 @@ public class BFrontController extends HttpServlet {
 			RequestDispatcher dispatcher = request.getRequestDispatcher("logout");
 			dispatcher.forward(request, response);
 			
-		}
+		}else if (com.equals("/delet.do")) {
+			response.setContentType("apploaction/json; charset=UTF-8");
+			RequestDispatcher dispatcher = request.getRequestDispatcher("logout");
+			dispatcher.forward(request, response);
 	
 		System.out.println("actionDo");
 		
@@ -150,6 +153,7 @@ public class BFrontController extends HttpServlet {
 			command = new BReplyCommand();
 			command.execute(request, response);
 			viewPage = "list.do?page="+curPage;
+		
 		}
 		
 		response.setContentType("text/html; charset=UTF-8");

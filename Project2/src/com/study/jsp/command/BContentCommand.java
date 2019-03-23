@@ -6,7 +6,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.struy.jsp.dto.BDto;
+import com.strudy.jsp.dto.BDto;
 import com.study.jsp.dao.BDao;
 
 public class BContentCommand implements Bcommand{

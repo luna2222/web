@@ -10,8 +10,8 @@ import javax.naming.Context;
 import javax.naming.InitialContext;
 import javax.sql.DataSource;
 
-import com.struy.jsp.dto.BDto;
-import com.struy.jsp.dto.BpageInfo;
+import com.strudy.jsp.dto.BDto;
+import com.strudy.jsp.dto.BpageInfo;
 
 
 
@@ -69,7 +69,7 @@ public class BDao {
 		return rn;
 	}
 
-	public ArrayList<BDto> list(int curPage, int bNotice) {
+	public ArrayList<BDto> list(int curPage, int bCategory) {
 		ArrayList<BDto> dtos = new ArrayList<BDto>();
 		Connection con = null;
 		PreparedStatement pstmt = null;
@@ -82,22 +82,23 @@ public class BDao {
 			con = dataSource.getConnection();
 			String query = "  select * " + 
 						   "  from ( " + 
-						   "   select rownum num, A.* " + 
-						   "     from ( " + 
+						   "   select rownum num, A.* from( " + 
+						   "   select * from(   " + 
 						   "        select * " + 
 						   "          from mvc_board " + 
-						   "         where bNotice = ?" +
+						   "         where bcategory = ?" +
 						   "         order by bgroup desc, bstep asc ) A " + 
 						   "    where rownum <= ? ) B " + 
 						   "where B.num >= ? ";
 			// bId의 bGroup으로 bStep 순서대로 정렬
 			pstmt = con.prepareStatement(query);
-			pstmt.setInt(1, bNotice);
+			pstmt.setInt(1, bCategory);
 			pstmt.setInt(2, nEnd);
 			pstmt.setInt(3, nStart);
 			resultSet = pstmt.executeQuery();
 			
 			while (resultSet.next()) {
+				int bCategory = resultSet.getInt("bCategory");
 				int bId = resultSet.getInt("bId");
 				String bName = resultSet.getString("bName");
 				String bTitle = resultSet.getString("bTitle");
@@ -108,8 +109,8 @@ public class BDao {
 				int bStep = resultSet.getInt("bStep");
 				int bIndent = resultSet.getInt("bIndent");
 				int bNotice = resultSet.getInt("bNotice");
-				BDto dto = new BDto(bId, bName, bTitle, bContent, bDate,
-									bHit, bGroup, bStep, bIndent,bNotice);
+				BDto dto = new BDto(bCategory,bId, bName, bTitle, bContent, bDate,
+									bHit, bGroup, bStep, bIndent);
 				dtos.add(dto);
 			}
 		} catch (Exception e) {
@@ -145,6 +146,7 @@ public class BDao {
 			resultSet = pstmt.executeQuery();
 			
 			if(resultSet.next()) {
+				int bCategory = resultSet.getInt("bCategory");
 				int bId= resultSet.getInt("bId");
 				String bName = resultSet.getString("bName");
 				String bTitle = resultSet.getString("bTitle");
@@ -156,8 +158,8 @@ public class BDao {
 				int bIndent = resultSet.getInt("bIndent");
 				int bNotice = resultSet.getInt("bNotice");
 				
-				dto = new BDto(bId, bName, bTitle, bContent, bDate,
-									bHit, bGroup, bStep, bIndent, bNotice);				
+				dto = new BDto(bCategory,bId, bName, bTitle, bContent, bDate,
+									bHit , bGroup, bStep, bIndent, bNotice);				
 			}
 			
 		} catch (Exception e) {
@@ -267,6 +269,7 @@ public class BDao {
 			resultSet = pstmt.executeQuery();
 			
 			if(resultSet.next()) {
+				int bCategory = resultSet.getInt("bCategory");
 				int bId= resultSet.getInt("bId");
 				String bName = resultSet.getString("bName");
 				String bTitle = resultSet.getString("bTitle");
@@ -278,7 +281,7 @@ public class BDao {
 				int bIndent = resultSet.getInt("bIndent");
 				int bNotice = resultSet.getInt("bNotice");
 				
-				dto = new BDto(bId, bName, bTitle, bContent+"\n---답변 작성---\n", 
+				dto = new BDto(bCategory,bId, bName, bTitle, bContent+"\n---답변 작성---\n", 
 						bDate, bHit, bGroup, bStep, bIndent, bNotice);
 			}			
 		} catch (Exception e) {
@@ -295,7 +298,7 @@ public class BDao {
 		return dto;
 	}
 
-	public void reply(String bId, String bName, String bTitle, String bContent, String bGroup, String bStep,
+	public void reply(String bCategory,String bId, String bName, String bTitle, String bContent, String bGroup, String bStep,
 			String bIndent) 
 	{
 		replyShape(bGroup, bStep);
@@ -306,17 +309,17 @@ public class BDao {
 		try {
 			con = dataSource.getConnection();
 			String query = "insert into mvc_board " +
-					   " (bid, bName, bTitle, bContent, bGroup, bStep, bIndent) " +
+					   " (bCategory,bid, bName, bTitle, bContent, bGroup, bStep, bIndent) " +
 					   " values " +
-					   " (mvc_board_seq.nextval, ?, ?, ?, ?, ?, ?)";
+					   " (?,mvc_board_seq.nextval, ?, ?, ?, ?, ?, ?)";
 			pstmt = con.prepareStatement(query);
-			
-			pstmt.setString(1, bName);
-			pstmt.setString(2, "└" + bTitle + "re");
-			pstmt.setString(3, bContent);
-			pstmt.setInt(4, Integer.parseInt(bGroup));
-			pstmt.setInt(5, Integer.parseInt(bStep)+1);
-			pstmt.setInt(6, Integer.parseInt(bIndent)+1);
+			pstmt.setInt(1, Integer.parseInt(bCategory));
+			pstmt.setString(2, bName);
+			pstmt.setString(3, "└" + bTitle + "re");
+			pstmt.setString(4, bContent);
+			pstmt.setInt(5, Integer.parseInt(bGroup));
+			pstmt.setInt(6, Integer.parseInt(bStep)+1);
+			pstmt.setInt(7, Integer.parseInt(bIndent)+1);
 			
 			int rn = pstmt.executeUpdate();
 		} catch (Exception e) {
