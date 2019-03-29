@@ -22,6 +22,14 @@
    </script>
 </head>
 <body>
+
+<div class="alert alert-warning alert-dismissible fade show" role="alert">
+  <strong>Welcome!</strong>  
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+
 	<form method="post" name="login_form" action="client.jsp">
 	 <div class="container">
 	 <div class="form-group">
