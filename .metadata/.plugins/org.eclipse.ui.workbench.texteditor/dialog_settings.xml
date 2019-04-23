@@ -2,12 +2,13 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="Disp" key="selection"/>
+		<item value="notiTitle" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="notiTitle"/>
 			<item value="disp"/>
 			<item value="slist"/>
 			<item value="listCount"/>
@@ -22,7 +23,6 @@
 			<item value="/write.do"/>
 			<item value="dispatcher"/>
 			<item value="jquery"/>
-			<item value="repltShape"/>
 		</list>
 		<list key="replacehistory">
 			<item value="init"/>
